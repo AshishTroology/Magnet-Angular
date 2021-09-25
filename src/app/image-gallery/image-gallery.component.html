@@ -1,0 +1,42 @@
+
+	<app-userheader></app-userheader>
+		<div class="container">
+			<span *ngFor="let data of imagedata">
+			<div class="itemAlign" >
+				<div class="lDiv w80">
+					<p class="font-15">{{data.image_title}}</p>
+				</div>
+				<div class="rDiv w15 text-center">
+				  <div class="Ebutton r" id="button-1">
+					<input type="checkbox" class="checkbox" [checked]="data.status == true" (change)="checkCheckBoxvalue(data,$event)">
+					<div class="knobs"></div>
+					<div class="layer"></div>
+				  </div>
+				  <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+				</div>
+			</div>
+			<div class="card service gallerySec mt-2">
+				<div class="itemAlign">
+					<img src="{{data.image_url}}" class="img-fluid">
+				</div>
+
+				<div class="itemAlign">
+					<div class="lDiv w50 padding-all-1 bTop bRight text-center">
+						<a href="/edit-image-gallery/{{data._id}}" class="font-16 fw-600"><i class="fa fa-edit"></i> Edit</a>
+					</div>
+					<div class="lDiv w50 padding-all-1 bTop text-center">
+						<a  class="font-16 fw-600 colorLight" (click)="deleteimage(data)"><i class="fa fa-trash"></i> Delete</a>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+		</span>
+			
+
+			<div class="mt-2">
+				<a href="/add-image-gallery" class="addServiceBtn"><i class="fa fa-picture-o"></i> Add More
+					Images</a>
+			</div>
+		</div>
+		<app-userfooter></app-userfooter>

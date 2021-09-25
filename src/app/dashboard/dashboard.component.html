@@ -1,0 +1,349 @@
+
+    <app-userheader></app-userheader>
+      <div class="container">
+
+
+        <div class="whatsMsgBox">
+            <div class="col-md-12">
+          <div class="form-group">
+            <div class="whatsMindIcon">
+              <span><i class="fa fa-comments" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" id="facebook" name="facebook" placeholder="What's on your mind, {{ dashboarddata.first_name }}?">
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="w100 mb-2">
+            <h4 class="font-red">Personal Information</h4>
+            <p class="font-12">Update your Personal Information to be displayed on Your Magnet Site</p>
+          </div>
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/personalinformation">
+                <img src="./assets/img/personal-detail.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/personalinformation">
+                <h4>Personal Detail</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Personal_Detail == 'true'"  (change)="checkCheckBoxvalue('Personal_Detail',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/contactdetail">
+                <img src="./assets/img/contact-detail.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/contactdetail">
+                <h4>Contact Detail</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1" >
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Contact_Detail == 'true'" (change)="checkCheckBoxvalue('Contact_Detail',$event)" >
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/socialmediadetail">
+                <img src="./assets/img/social-media-detail.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/socialmediadetail">
+                <h4>Social Media Detail</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1" >
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Social_Media_Links == 'true'" (change)="checkCheckBoxvalue('Social_Media_Links',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/aboutme">
+                <img src="./assets/img/about-me.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/aboutme">
+                <h4>About Me</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.About_Me == 'true'" (change)="checkCheckBoxvalue('About_Me',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-3">
+          <div class="w100 mb-2">
+            <h4 class="font-red">Service & Product</h4>
+            <p class="font-12">Update your Personal Information to be displayed on Your Magnet Site</p>
+          </div>
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/services">
+                <img src="./assets/img/services.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/services">
+                <h4>Services</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Service == 'true'" (change)="checkCheckBoxvalue('Service',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/products">
+                <img src="./assets/img/products.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/products">
+                <h4>Products</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Product == 'true'" (change)="checkCheckBoxvalue('Product',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/testimonials">
+                <img src="./assets/img/testimonials.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/testimonials">
+                <h4>Testimonials</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Testimonials == 'true'" (change)="checkCheckBoxvalue('Testimonials',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-3">
+          <div class="w100 mb-2">
+            <h4 class="font-red">Links</h4>
+            <p class="font-12">Update your Personal Information to be displayed on Your Magnet Site</p>
+          </div>
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/image-gallery">
+                <img src="./assets/img/image-gallery.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/image-gallery">
+                <h4>Image Gallery</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Image_Gallery == 'true'" (change)="checkCheckBoxvalue('Image_Gallery',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/video-gallery">
+                <img src="./assets/img/video-gallery.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/video-gallery">
+                <h4>Video Gallery</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Video_Gallery == 'true'" (change)="checkCheckBoxvalue('Video_Gallery',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/important-links">
+                <img src="./assets/img/important-links.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/important-links">
+                <h4>Important Links</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Important_Links == 'true'" (change)="checkCheckBoxvalue('Important_Links',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card mt-3">
+          <div class="w100 mb-2">
+            <h4 class="font-red">Payment Information</h4>
+            <p class="font-12">Update your Personal Information to be displayed on Your Magnet Site</p>
+          </div>
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/bank-account">
+                <img src="./assets/img/bank-account-detail.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/bank-account">
+                <h4>Bank Account Detail</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.Bank_Account_Detail == 'true'"  (change)="checkCheckBoxvalue('Bank_Account_Detail',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+
+          <div class="itemAlign sectionClickBox">
+            <div class="lDiv w15">
+              <a href="/upi-image">
+                <img src="./assets/img/upi-image.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="/upi-image">
+                <h4>UPI Image</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="Ebutton r" id="button-1">
+                <input type="checkbox" class="checkbox" [checked]="settingdata.UPI_Image == 'true'" (change)="checkCheckBoxvalue('UPI_Image',$event)">
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
+              <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="magnetCrm">
+          <div class="itemAlign">
+            <div class="lDiv w15">
+              <a href="#">
+                <img src="./assets/img/crm.png" class="img-fluid rounded-circle">
+              </a>
+            </div>
+            <div class="lDiv w70 padding-all-1">
+              <a href="#">
+                <h4>Magnet CRM</h4>
+                <p class="font-10 fw-500 mb-3">Lorem Ipsum is simply dummy text of the printing and type setting industry.
+                </p>
+              </a>
+            </div>
+            <div class="rDiv w15 text-center">
+              <div class="notificationCRM">
+                12
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="text-center mt-2">
+          <span class="copyRight">Copyright &#169; 2021 MAGNET</span>
+        </div>
+
+      </div>
+
+      <app-userfooter></app-userfooter>
+

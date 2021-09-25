@@ -1,0 +1,40 @@
+
+	<app-userheader></app-userheader>
+		<div class="container">
+
+			<div class="card service" *ngFor="let data of testimonialdata">
+				<div class="itemAlign serviceList">
+					<div class="lDiv w15">
+						<img src="./assets/img/innerTesti.png" class="img-fluid rounded-circle">
+					</div>
+					<div class="lDiv w70 padding-all-1">
+						<h4>{{data.customer_name}}</h4>
+					</div>
+					<div class="rDiv w15 text-center">
+					  <div class="Ebutton r" id="button-1">
+						<input type="checkbox" class="checkbox" [checked]="data.status == true" (change)="checkCheckBoxvalue(data,$event)">
+						<div class="knobs"></div>
+						<div class="layer"></div>
+					  </div>
+					  <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+					</div>
+				</div>
+
+				<div class="itemAlign">
+					<div class="lDiv w50 padding-all-1 bTop bRight text-center">
+						<a href="/edit-testimonials/{{data._id}}" class="font-16 fw-600"><i class="fa fa-edit"></i> Edit</a>
+					</div>
+					<div class="lDiv w50 padding-all-1 bTop text-center">
+						<a  class="font-16 fw-600 colorLight" (click)="deletetestimonial(data)"><i class="fa fa-trash"></i> Delete</a>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="mt-2">
+				<a href="/add-testimonials" class="addServiceBtn"><i class="fa fa-plus-circle"></i> Add
+					Testimonials</a>
+			</div>
+
+		</div>
+		<app-userfooter></app-userfooter>

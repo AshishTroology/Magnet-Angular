@@ -1,0 +1,73 @@
+{
+    "as":{
+        "name":"Assamese",
+        "nativeName":"অসমীয়া"
+        },
+    "bn":{
+        "name":"Bengali",
+        "nativeName":"বাংলা"
+    },
+    "bh":{
+        "name":"Bihari",
+        "nativeName":"भोजपुरी"
+    },
+    "en":{
+        "name":"English",
+        "nativeName":"English"
+    },
+    "gu":{
+        "name":"Gujarati",
+        "nativeName":"ગુજરાતી"
+    },
+    "hi":{
+        "name":"Hindi",
+        "nativeName":"हिंदी"
+    },
+
+ 
+    "kn":{
+        "name":"Kannada",
+        "nativeName":"ಕನ್ನಡ"
+    },
+  
+    "ks":{
+        "name":"Kashmiri",
+        "nativeName":"كشميري‎"
+    },
+    "ml":{
+        "name":"Malayalam",
+        "nativeName":"മലയാളം"
+    },
+    "mr":{
+        "name":"Marathi (Marāṭhī)",
+        "nativeName":"मराठी"
+    },
+    "ne":{
+        "name":"Nepali",
+        "nativeName":"नेपाली"
+    },
+    "or":{
+        "name":"Oriya",
+        "nativeName":"ଓଡ଼ିଆ"
+    },
+    "pa":{
+        "name":"Punjabi",
+        "nativeName":"ਪੰਜਾਬੀ"
+    },
+    "sa":{
+        "name":"Sanskrit",
+        "nativeName":"संस्कृतम्"
+    },
+    "ta":{
+        "name":"Tamil",
+        "nativeName":"தமிழ்"
+    },
+    "te":{
+        "name":"Telugu",
+        "nativeName":"తెలుగు"
+    },
+    "ur":{
+        "name":"Urdu",
+        "nativeName":"اردو"
+    }
+}

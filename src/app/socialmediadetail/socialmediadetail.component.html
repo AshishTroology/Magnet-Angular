@@ -1,0 +1,57 @@
+
+
+ <app-userheader></app-userheader>
+    <div class="container">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="facebook">Facebook<span class="mandatorySymbol">*</span></label>
+          <div class="Icon-inside ">
+            <img src="./assets/img/facebook.png" aria-hidden="true" height="50" width="50">
+            <input type="text" class="form-control" id="facebook" formControlName="facebook"
+              placeholder="www.facebook.com/manishrockstar" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="instagram">Instagram<span class="mandatorySymbol">*</span></label>
+          <div class="Icon-inside ">
+            <img src="./assets/img/instagram.png" aria-hidden="true" height="50" width="50">
+            <input type="text" class="form-control" id="instagram" formControlName="instagram"
+              placeholder="https://www.instagram.com/">
+              <span><i class="fa fa-check-circle" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="twitter">Twitter<span class="mandatorySymbol">*</span></label>
+          <div class="Icon-inside ">
+            <img src="./assets/img/twitter.png" aria-hidden="true" height="50" width="50">
+            <input type="text" class="form-control" id="twitter" formControlName="twitter" placeholder="https://twitter.com/">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="youtube">Youtube<span class="mandatorySymbol">*</span></label>
+          <div class="Icon-inside ">
+            <img src="./assets/img/youtube.png" aria-hidden="true" height="50" width="50">
+            <input type="text" class="form-control" id="youtube" formControlName="youtube" placeholder="https://www.youtube.com/">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="linkedln">Linkedln<span class="mandatorySymbol">*</span></label>
+          <div class="Icon-inside ">
+            <img src="./assets/img/linkedin.png" aria-hidden="true" height="50" width="50">
+            <input type="text" class="form-control" id="linkedin" formControlName="linkedin"
+              placeholder="https://in.linkedin.com/">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="pintrest">Pintrest<span class="mandatorySymbol">*</span></label>
+          <div class="Icon-inside ">
+            <img src="./assets/img/pinterest.png" aria-hidden="true" height="50" width="50">
+            <input type="text" class="form-control" id="pintrest" formControlName="pintrest"
+              placeholder="https://in.pinterest.com/">
+          </div>
+        </div>
+        <button type="submit" class="btn saveBtn">SAVE</button>
+        <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+      </form>
+    </div>
+   <app-userfooter></app-userfooter>

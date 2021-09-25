@@ -1,0 +1,11 @@
+{
+	"home": {
+		"signin_label": "Sign in with Google",
+		"help_label": "Need Help",
+		"title": "Welcome to my multi lingual application",
+		"comeback": "Welcome back {{name}}"
+	},
+  "about": {
+
+  }
+}

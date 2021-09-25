@@ -1,0 +1,24 @@
+
+  <app-userheader></app-userheader>
+    <div class="container">
+
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="upi_id">UPI Id<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control" id="upi_id" formControlName="upi_id" placeholder="Enter UPI Id" required>
+        </div>
+
+
+        <div class="photoUpload mt-3" id="cover_frame" [style.background-image]="'url('+upi_frame+')'">
+          <div class="form-group cover_photo">
+            <label class="uploadCover" for="upi_image"><i class="fa fa-camera"></i> Upload UPI Image</label>
+
+            <input type="file" class="form-control" style="visibility:hidden;" (change)="onselectcompanyFile($event)" id="upi_image">
+          </div>
+        </div>
+        <button type="submit" class="btn saveBtn">SAVE</button>
+        <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+      </form>
+    </div>
+    <app-userfooter></app-userfooter>

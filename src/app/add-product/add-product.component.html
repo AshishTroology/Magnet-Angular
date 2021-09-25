@@ -1,0 +1,72 @@
+
+    <app-userheader></app-userheader>
+<div class="container">
+	<form [formGroup]="userform" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="product_title">Product Title<span class="mandatorySymbol">*</span></label>
+        <input type="text" class="form-control" id="product_title" formControlName="product_title" placeholder="Enter Product Title Here"  required>
+      </div>
+      <!-- <div class="form-group">
+        <label for="product_price">Product Price<span class="mandatorySymbol">*</span></label>
+          <div class="Icon-inside ">
+        <input type="text" class="form-control" id="product_price" name="product_price" placeholder="Enter Your Product Price"  required>
+        <span><img src="/assets/img/rupeeIcon.png"></span>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-sm-12 ">
+            <div class="lDiv w45">
+              <div class="form-group">
+                <label for="gst_number">Product Price</label>
+                <div class="Icon-inside ">
+                  <input type="text" class="form-control" formControlName="product_price" placeholder="Enter Product price">
+                  <span><img src="./assets/img/rupeeIcon.png"></span>
+                </div>
+              </div>
+            </div>
+            <div class="rDiv w45">
+              <div class="form-group">
+                <label for="pan_card_number">List Price</label>
+                <div class="Icon-inside ">
+                  <input type="text" class="form-control" formControlName="list_price" placeholder="Enter List price">
+                  <span><img src="./assets/img/rupeeIcon.png"></span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="product_link">Product Link<span class="mandatorySymbol">*</span></label>
+        <input type="email" class="form-control" id="product_link" formControlName="product_link" placeholder="Enter Product URL" required>
+      </div>
+      <div class="form-group">
+        <label for="company_name">Description<span class="mandatorySymbol">*</span></label>
+        <ckeditor  (change)="onChange($event)" ></ckeditor>
+      </div> 
+
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-12">
+        <div class="lDiv productPrevieImg" *ngFor='let preview of previews'>
+          <button class="btn"><i class="fa fa-close"></i></button>
+          <img [src]="preview"  class="img-fluid img-thumbnail">
+        </div>
+      </div>
+    </div>
+      <div class="clearfix"></div>
+
+        <div class="productUpload mt-3">
+          <div class="form-group cover_photo">
+        <label class="uploadProductImg" for="product_image"><i class="fa fa-upload"></i> Upload Product Images</label>
+            
+            <input type="file" class="form-control" style="visibility:hidden;" multiple="" 
+            (change)="onFileChange($event)"
+              id="product_image" name="product_image">
+          </div>
+        </div>
+  
+      <button type="submit" class="btn saveBtn">SAVE</button>
+       <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+    </form>
+</div>
+<app-userfooter></app-userfooter>

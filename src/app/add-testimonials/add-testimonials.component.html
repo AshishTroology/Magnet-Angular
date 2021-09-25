@@ -1,0 +1,18 @@
+
+    <app-userheader></app-userheader>
+<div class="container">
+	<form [formGroup]="userform" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="customer_name">Customer Name<span class="mandatorySymbol">*</span></label>
+        <input type="text" class="form-control"  id="customer_name" formControlName="customer_name" placeholder="Enter Customer Name">
+      </div>
+    <div class="form-group">
+        <label for="company_name">Description<span class="mandatorySymbol">*</span></label>
+        <ckeditor  (change)="onChange($event)" ></ckeditor>
+       
+      </div>  
+      <button type="submit" class="btn saveBtn">SAVE</button>
+      <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+    </form>
+</div>
+<app-userfooter></app-userfooter>

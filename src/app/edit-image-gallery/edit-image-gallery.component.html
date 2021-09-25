@@ -1,0 +1,24 @@
+
+<app-userheader></app-userheader>
+<div class="container">
+	<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="customer_name">Image Title<span class="mandatorySymbol">*</span></label>
+        <input type="text" class="form-control"  id="image_title" formControlName="image_title" value="need title for better visibility" placeholder="Enter your Image Title Here">
+      </div>
+
+      <div class="card service gallerySec mt-3">
+    <div class="itemAlign editImageGal">
+      <div class="changeImg">
+        <label><input type="file" class="form-control" style="visibility:hidden;" (change)="onselectservice($event)" 
+          id="service_image" formControlName="image_photo" > <i class="fa fa-edit" id="service_image"></i> Change Photo</label>
+        <!-- <i class="fa fa-camera" id="service_image"></i> Change Image -->
+      </div>
+        <img src="{{image_frame}}" class="img-fluid">
+    </div>
+  </div>
+      <button type="submit" class="btn saveBtn">SAVE</button>
+       <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+    </form>
+</div>
+<app-userfooter></app-userfooter>

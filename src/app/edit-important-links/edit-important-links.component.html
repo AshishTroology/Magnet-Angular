@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<app-userheader></app-userheader>
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="video_title">Link Title<span class="mandatorySymbol">*</span></label>
+        <input type="text" class="form-control"  id="link_title" formControlName="link_title"  placeholder="Enter link title here">
+      </div>
+       <div class="form-group">
+        <label for="video_url">Link URL<span class="mandatorySymbol">*</span></label>
+         <div class="Icon-inside ">
+        <input type="text" class="form-control"  id="link_url" formControlName="link_url"  placeholder="Enter your link">
+        <span><img src="./assets/img/linkicon.png"></span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn saveBtn">SAVE</button>
+      <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+    </form>
+</div>
+<app-userfooter></app-userfooter>

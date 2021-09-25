@@ -1,0 +1,75 @@
+
+  <app-userheader></app-userheader>
+    <div class="container">
+      <div class="itemAlign alertBox">
+        <div class="ldiv text-center w10">
+          <img src="./assets/img/alertIcon.png" style="width:60%;">
+        </div>
+        <div class="ldiv w90">
+          <p class="alertBoxText">Please fill out this application form very carefully. <br>Errors and/or Omissions may render your application invalid</p>
+        </div>
+      </div>
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="bank_name">Bank Name<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control"  formControlName="bank_name" value={{bank_value}}
+            readonly required>
+        </div>
+        <div class="form-group">
+          <label for="bank_name">Branch Name<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control"  formControlName="branch_name" value={{bank_branch}}
+            readonly required>
+        </div>
+
+        <div class="form-group">
+          <label for="account_type">Account Type<span class="mandatorySymbol">*</span></label>
+          <select formControlName="account_type" id="account_type" class="form-control">
+            <option selected>Select Account Type</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="account_name">Account Name<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control" id="account_name" formControlName="account_name"
+            placeholder="Enter Your Account Name" required>
+        </div>
+        <div class="form-group">
+          <label for="account_number">Account Number<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control" id="account_number" formControlName="account_number"
+            placeholder="Enter Your 16 digit Account Number" required>
+        </div>
+        <div class="form-group">
+          <label for="ifsc_code">IFSC Code<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control" id="ifsc_code" (blur)=onBlur($event)  formControlName="ifsc_code" placeholder="Enter IFSC Code"
+            required>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 ">
+              <div class="lDiv w45">
+                <div class="form-group">
+                  <label for="gst_number">GST No.<span class="mandatorySymbol">*</span></label>
+                  <input type="text" class="form-control" id="gst_number" formControlName="gst_number"
+                    placeholder="Enter GST Number" required>
+                </div>
+              </div>
+              <div class="rDiv w45">
+                <div class="form-group">
+                  <label for="pan_card_number">PAN Card Number<span class="mandatorySymbol">*</span></label>
+                  <input type="text" class="form-control" id="pan_card_number" formControlName="pan_card_number"
+                    placeholder="Enter PAN Card Number" required>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="remark">Remark<span class="mandatorySymbol">*</span></label>
+          <textarea id="remark" class="form-control" formControlName="remark" rows="4" placeholder="Enter Remarks"></textarea>
+        </div>
+        <button type="submit" class="btn saveBtn">Save</button>
+        <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+      </form>
+    </div>
+   <app-userfooter></app-userfooter>

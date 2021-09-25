@@ -1,0 +1,24 @@
+input[type=text] {
+    width: 100%;
+    padding: .8rem;
+    /* margin:4px; */
+    box-sizing: border-box;
+    padding-left: 3rem;
+  }
+
+  .Icon-inside {
+    position: relative;
+  }
+
+  .Icon-inside img {
+    position: absolute;
+    left: 0rem;
+    top: .01rem;
+    padding: 10px 10px;
+    color: #30A3F1;
+  }
+  .Icon-inside .fa{
+    color: #2fff49;
+  padding-right: .5rem;
+  padding-top: .5rem;
+  }

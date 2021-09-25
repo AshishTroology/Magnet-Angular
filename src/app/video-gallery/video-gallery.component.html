@@ -1,0 +1,48 @@
+
+	<app-userheader></app-userheader>
+		<div class="container">
+      <span *ngFor="let data of videodata">
+			<div class="itemAlign">
+				<div class="lDiv w80">
+					<p class="font-15">{{data.video_title}}</p>
+				</div>
+				<div class="rDiv w15 text-center">
+				  <div class="Ebutton r" id="button-1">
+					<input type="checkbox" class="checkbox" [checked]="data.status == true" (change)="checkCheckBoxvalue(data,$event)">
+					<div class="knobs"></div>
+					<div class="layer"></div>
+				  </div>
+				  <!-- <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Show" data-off="Hide"> -->
+				</div>
+			</div>
+			<div class="card service gallerySec mt-2">
+				<div class="itemAlign" >
+	<!-- <h5>{{data.video_url}}</h5> -->
+					<iframe width="100%" height="250" [src]="safe_url(data.video_url)"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				
+				</div>
+
+				<div class="itemAlign">
+					<div class="lDiv w50 padding-all-1 bTop bRight text-center">
+						<a href="/edit-video-gallery/{{data._id}}" class="font-16 fw-600"><i class="fa fa-edit"></i> Edit</a>
+					</div>
+					<div class="lDiv w50 padding-all-1 bTop text-center">
+						<a  class="font-16 fw-600 colorLight" (click)="deletevideo(data)"><i class="fa fa-trash"></i> Delete</a>
+					</div>
+				</div>
+			</div>
+
+			<hr />
+    </span>
+
+
+
+			<div class="mt-2">
+				<a href="/add-video-gallery" class="addServiceBtn"><i class="fa fa-file-video-o"></i> Add More
+					Videos</a>
+			</div>
+		</div>
+		<app-userfooter></app-userfooter>

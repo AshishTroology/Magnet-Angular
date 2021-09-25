@@ -1,0 +1,73 @@
+
+ <app-userheader></app-userheader>
+    <div class="container">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="product_title">Product Title<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control" id="product_title" formControlName="product_title"
+            placeholder="Enter Product Title Here" required>
+        </div>
+        <div class="row">
+        <div class="col-sm-12 ">
+          <div class="lDiv w45">
+            <div class="form-group">
+              <label for="gst_number">Product Price</label>
+              <div class="Icon-inside ">
+                <input type="text" class="form-control" formControlName="product_price" placeholder="Enter Product price">
+                <span><img src="./assets/img/rupeeIcon.png"></span>
+              </div>
+            </div>
+          </div>
+          <div class="rDiv w45">
+            <div class="form-group">
+              <label for="pan_card_number">List Price</label>
+              <div class="Icon-inside ">
+                <input type="text" class="form-control" formControlName="list_price" placeholder="Enter List price">
+                <span><img src="./assets/img/rupeeIcon.png"></span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+        <div class="form-group">
+          <label for="product_link">Product Link<span class="mandatorySymbol">*</span></label>
+          <input type="email" class="form-control" id="product_link" formControlName="product_link" placeholder="Enter Product URL"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="company_name">Description<span class="mandatorySymbol">*</span></label>
+          <ckeditor  (change)="onChange($event)" ></ckeditor>
+        
+        </div>
+        <div class="card service gallerySec" *ngFor="let data of productimage">
+          <div class="itemAlign">
+
+            <!-- <a id="img_close">
+              <div class="Ebutton r" id="button-1">
+              <input type="checkbox" class="checkbox">
+              <div class="knobs"></div>
+              <div class="layer"></div>
+            </div>
+            </a> -->
+            <img src="{{data.imagename}}" class="img-fluid">
+          </div>
+          <div class="itemAlign">
+            <div class="lDiv w50 padding-all-1 bTop bRight text-center">
+              <span class="font-16 fw-600"><input type="radio" [checked]="data.putascover ===true" (change)="checkCheckBoxvalue(data,$event)" name="product_image"> Put as Cover</span>
+              <!-- <a href="" class="font-16 fw-600"><img src="/assets/img/putasCover.png" class="putAsCover"> Put as Cover</a> -->
+            </div>
+            <div class="lDiv w50 padding-all-1 bTop text-center">
+              <a href="#" class="font-16 fw-600 colorLight"><i class="fa fa-trash"></i> Delete</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-2">
+          <a href="" class="addServiceBtn"><i class="fa fa-plus-circle"></i> Add More Images</a>
+        </div>
+
+        <button type="submit" class="btn saveBtn">SAVE</button>
+        <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+      </form>
+    </div>
+   <app-userfooter></app-userfooter>

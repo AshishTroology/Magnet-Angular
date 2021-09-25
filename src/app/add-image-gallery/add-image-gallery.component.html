@@ -1,0 +1,21 @@
+
+
+<app-userheader></app-userheader>
+<div class="container">
+	<form [formGroup]="userform" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="customer_name">Image Title<span class="mandatorySymbol">*</span></label>
+        <input type="text" class="form-control"  id="image_title" formControlName="image_title" placeholder="Enter Your Image Title here">
+      </div>
+      <div class="photoUpload mt-3" id="cover_frame" [style.background-image]="'url('+image_frame+')'">
+          <div class="form-group cover_photo">
+        <label class="uploadCover" for="image"><i class="fa fa-camera"></i> Upload Image</label>
+            <input type="file" class="form-control" style="visibility:hidden;" (change)="onselectcompanyFile($event)"
+              id="image" >
+          </div>
+        </div>
+      <button type="submit" class="btn saveBtn">SAVE</button>
+       <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+    </form>
+</div>
+<app-userfooter></app-userfooter>

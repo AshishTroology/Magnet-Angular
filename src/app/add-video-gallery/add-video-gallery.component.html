@@ -1,0 +1,33 @@
+
+    <app-userheader></app-userheader>
+    <div class="container">
+      <form [formGroup]="userform" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="video_title">Video Title<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control" id="video_title" formControlName="video_title"
+            placeholder="Enter your Video Title here">
+        </div>
+        <div class="form-group">
+          <label for="video_url">Video URL<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control" id="video_url" (blur)=onBlur($event)  placeholder="Paste URL here">
+        </div>
+
+        <div class="previewphotoUpload mt-3" id="cover_frame" [style.background-image]="'url('+thumbnailurl+')'">
+          <div class="form-group cover_photo">
+            <p class="font-10">Preview URL Link Image <br>After Past Video URL in URL Area</p>
+    
+          </div>
+        </div>
+
+
+        <!-- <div class="card service gallerySec">
+          <div class="itemAlign">
+            <p>Preview URL Link Image After Past Video URL in URL Area</p>
+          </div>
+        </div> -->
+
+        <button type="submit" class="btn saveBtn">SAVE</button>
+        <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+      </form>
+    </div>
+    <app-userfooter></app-userfooter>

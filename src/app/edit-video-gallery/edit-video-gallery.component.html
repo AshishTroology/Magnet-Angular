@@ -1,0 +1,24 @@
+
+ <app-userheader></app-userheader>
+    <div class="container">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="video_title">Video Title<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control" id="video_title" formControlName="video_title"
+            placeholder="Enter your Video Title Here">
+        </div>
+        <div class="form-group">
+          <label for="video_url">Video URL<span class="mandatorySymbol">*</span></label>
+          <input type="text" class="form-control" id="video_url" formControlName="video_url" (blur)=onBlur($event)
+            placeholder="Paste your Video URL here">
+        </div>
+        <div class="card service gallerySec mt-3">
+          <div class="itemAlign">
+            <iframe width="100%" height="250" [src]="safe_url(videodata[0].video_url)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <button type="submit" class="btn saveBtn">SAVE</button>
+        <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+      </form>
+    </div>
+  <app-userfooter></app-userfooter>

@@ -1,0 +1,48 @@
+
+  <app-userheader></app-userheader>
+
+<div class="container">
+	<form [formGroup]="userform" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="service_title">Service Title<span class="mandatorySymbol">*</span></label>
+        <input type="text" class="form-control" id="service_title" formControlName="service_title" placeholder="Enter your Service Title Here"  required>
+      </div>
+
+      <div class="form-group">
+        <label for="company_name">Description<span class="mandatorySymbol">*</span></label>
+        <ckeditor  (change)="onChange($event)" ></ckeditor>
+        <!-- <ckeditor data="<p><b>We are a team of professional Insurance and Financial Advisor who are here to cater to your needs and advice related to Life/Health Insurance plans and Mutrual Fund Investments. </b></p> <p><b>We have been offering Insurance and Financial advice to our customers for last 13 years.Our expertise ranges from individual & family insurances to a broad range of business insurance,financial products(Mutual Funds) and advice.</b></p>
+          <p><b>We have a proven track record in managing risk and building certainty.We also provide support to people who wish to make a career in Insurance and Financial Sector.</b></p>
+          <p><b>Our Achievements :-</b></p>
+          <p><b>3 times MDRT(USA),2016,2012017,2019</b></p>
+          <p><b>Corporate club Member - Past 5 year</b></p>
+          <p><b>Experience :-</b></p>
+          <p><b>More than 20 yrs in Financial Services Industry</b></p>
+           <p><b>Assets Under Management:-</b></p>
+          <p><b>80 Cr</b></p>
+          <p><b>Risk Under Management :-</b></p>
+          <p><b>250 Cr , 300 Lives</b></p>
+          <p><b>No of Family being Served :-</b></p>
+          <p><b>20 UHNI</b></p>
+          <p><b>50 HNI</b></p>"></ckeditor> -->
+        <!-- <textarea name="editor1" required> -->
+          
+        <!-- </textarea> -->
+      </div> 
+
+       <div class="photoUpload" id="cover_frame" [style.background-image]="'url('+service_frame+')'">
+          <div class="form-group cover_photo">
+        <label class="uploadCover" for="service_photo"><i class="fa fa-camera"></i> Upload Service Image</label>
+        <p><small>or</small></p>
+        <a href="#" style="color:#007bff; text-decoration:underline;">Select From Library</a>
+            <input type="file" class="form-control" style="visibility:hidden;" (change)="onselectcompanyFile($event)"
+              id="service_photo" formControlName="service_photo">
+          </div>
+        </div>
+      <button type="submit" class="btn saveBtn">SAVE</button>
+      <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+    </form>
+</div>
+<app-userfooter></app-userfooter>
+

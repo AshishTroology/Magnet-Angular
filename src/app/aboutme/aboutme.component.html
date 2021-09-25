@@ -1,0 +1,42 @@
+
+
+<app-userheader></app-userheader>
+    <div class="container">
+      <form [formGroup]="userform" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="w100">
+            <div class="col-sm-12 ">
+                <div class="lDiv w45">
+                  <div class="form-group">
+                    <label for="cover_photo">Template<span class="mandatorySymbol">*</span></label>
+                    <select formControlName="template" id="template_name" class="form-control" required>
+                      <option selected>Choose Template</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="rDiv w45">
+                  <div class="form-group">
+                    <label for="profile_pic">Industry<span class="mandatorySymbol">*</span></label>
+                  <select formControlName="industry" id="industry_name" class="form-control " required>
+                    <option *ngFor=" let ind of Industrydata" >{{ ind.Description }}</option>
+                  </select>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="company_name">Description<span class="mandatorySymbol">*</span></label>
+          <ckeditor   [config]="config" (change)="onChange($event)" ></ckeditor>
+
+        </div>
+        <button type="submit" class="btn saveBtn">SAVE</button>
+        <button type="reset" class="btn resetBtn"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+      </form>
+    </div>
+    <app-userfooter></app-userfooter>
